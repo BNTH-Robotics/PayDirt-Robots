@@ -6,14 +6,15 @@
 task main()
 {
 	while(true){
+		//Control the wheels with the joysticks
 		motor[port5] = vexRT[Ch2];
 		motor[port3] = vexRT[Ch3];
 
-		if(vexRT(Btn6U)){
+		if(vexRT(Btn6U)){ //If button 6 up is pressed, move arm up
 			motor[port7] = -60;
-			} else if(vexRT(Btn6D)){
+			} else if(vexRT(Btn6D)){ //If button 6 down is pressed, move arm down
 			motor[port7] = 60;
-			} else {
+			} else { //If neither are pressed, keep the arm still
 			motor[port7] = 0;
 		}
 	}
