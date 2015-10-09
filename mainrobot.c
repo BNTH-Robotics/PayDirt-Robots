@@ -26,6 +26,8 @@ task main()
 		motor[leftmotor] = vexRT[Ch2];
 		motor[rightmotor] = vexRT[Ch3];
 
+		
+		//ARM CONTROLS
 		if(vexRT(Btn7U)){ //If button 7 up is pressed, move arm up
 			motor[arm] = armspeed * -1;
 			} else if(vexRT(Btn7D)){ //If button 7 down is pressed, move arm down
@@ -33,7 +35,8 @@ task main()
 			} else { //If neither are pressed, keep the arm still
 			motor[arm] = 0;
 		}
-
+		
+		//ARM ROTATION CONTROLS
 		if(vexRT(Btn6U)){ //If button 6 up is pressed, rotate arm clockwise
 			motor[rotator] = rotatespeed;
 			} else if(vexRT(Btn5U)){ //If button 5 up is pressed, rotate arm counterclockwise
@@ -41,7 +44,8 @@ task main()
 			} else { //If neither are pressed, keep the arm still
 			motor[rotator] = 0;
 		}
-
+		
+		//GATE CONTROLS
 		if(vexRT(Btn8U)){ //Close latch
 			motor[ldump] = servoMin;
 			motor[rdump] = servoMin;
@@ -49,8 +53,6 @@ task main()
 			motor[ldump] = servoMax;
 			motor[rdump] = servoMax;
 		}
-
-
 
 
 	}
