@@ -16,6 +16,10 @@ task main()
 
 	int rotatespeed = 40; //Speed of arm rotation
 	int armspeed = 60; //Speed of arm up-and-down
+	
+	//End config
+	
+	
 
 	motor[ldump] = servoMin; //Set initial value of servos
 	motor[rdump] = servoMin;
