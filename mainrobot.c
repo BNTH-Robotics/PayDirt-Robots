@@ -14,8 +14,8 @@ task main(){
 	int servoMin = -90; //Closed position for back gate (defualt)
 	int servoMax = 127; //Open position for back gate
 
-	int rotatespeed = 40; //Speed of arm rotation
-	int armspeed = 60; //Speed of arm up-and-down
+	int rotateSpeed = 40; //Speed of arm rotation
+	int armSpeed = 60; //Speed of arm up-and-down
 	
 	//End config
 	
@@ -33,18 +33,18 @@ task main(){
 		
 		//ARM CONTROLS
 		if(vexRT(Btn7U)){ //If button 7 up is pressed, move arm up
-			motor[arm] = armspeed * -1;
+			motor[arm] = armSpeed * -1;
 			} else if(vexRT(Btn7D)){ //If button 7 down is pressed, move arm down
-			motor[arm] = armspeed;
+			motor[arm] = armSpeed;
 			} else { //If neither are pressed, keep the arm still
 			motor[arm] = 0;
 		}
 		
 		//ARM ROTATION CONTROLS
 		if(vexRT(Btn6U)){ //If button 6 up is pressed, rotate arm clockwise
-			motor[rotator] = rotatespeed;
+			motor[rotator] = rotateSpeed;
 			} else if(vexRT(Btn5U)){ //If button 5 up is pressed, rotate arm counterclockwise
-			motor[rotator] = rotatespeed * -1;
+			motor[rotator] = rotateSpeed * -1;
 			} else { //If neither are pressed, keep the arm still
 			motor[rotator] = 0;
 		}
