@@ -16,8 +16,8 @@ task main()
     {
             
             //Wheel Controls
-            motor[port8] = vexRT[Ch2]; 										//Right Wheels
-            motor[port2] = -vexRT[Ch3];										//Left Wheels Reversed
+            motor[port8] = vexRT[Ch2]; //Right Wheels
+            motor[port2] = -vexRT[Ch3];	//Left Wheels Reversed
 
             if(vexRT[Btn6U] == true) { //Move the body up
                 motor[port6] = 127;
